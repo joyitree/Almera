@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --orange: #ffa500;
+    --sean: #64DDD6;
+}
+
+*::selection{
+    background: var(--orange);
+    color: #ffff;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+    background-color: #333;
+    /* background-image: url("spotifypictures/bg5.jpg"); */
+}
+
+.section{
+    padding:2rem 9%;
+}
+
+.heading{
+    text-align: center;
+    padding: 2.5rem 0;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+}
+
+.heading span{
+    font-size: 3.5rem;
+    background-image: url('bructopictures/bg4.jpg');
+    color: #ffff;
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0; 
+    background: #333;
+    z-index: 1000;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 1rem 9%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header .logo{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header li{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: white;
+    padding: 0 12px;
+}
+
+header .logo img{
+    width: 44px;
+    padding: 0 8px;
+}
+header .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+header .navbar a{
+    color:#fff;
+    font-size: 2rem;
+    margin:0 .8rem;
+}
+
+header .navbar a:hover{
+    color:var(--sean);
+}
+
+#menu-bar{
+    color: #ffff;
+    border:.1rem solid #ffff;
+    border-radius: .5rem;
+    font-size: 3rem;
+    padding: .5rem 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/*home section starts*/
+.home{
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+.home .content{
+    text-align: center;
+}
+
+.home .content h3{
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,0.1);  
+}
+.home .content p{
+    font-size: 2.5rem;
+    color:#fff;
+    padding: 3rem 0;
+}
+
+.home .image-content img{
+    position:absolute;
+    top:0; left:0;
+    z-index:-1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* home section ends*/
+
+/*music setion starts*/
+.music .container{
+    min-height: 120vh;
+    background-color: black;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    width: 100%;
+    padding: 24px;
+    background-image: url('bructopictures/bg6.jpg');
+}
+.song-list{
+    margin-top: 54px;
+}
+.songitem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 34px;
+}
+.songitem img{
+    width: 39px;
+    margin: 0 10px;
+    border-radius: 34px;
+}
+/*music section ends*/
+
+/* about section starts */
+.about .container{
+    min-height: 5vh;
+    background-color: black;
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    width: 100%;
+    padding: 34px;
+    background-image: url('bructopictures/bg4.jpg');
+}
+.about .container h3{
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,0.1);  
+
+}
+.about .container .box{
+    margin-top: 14px;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw; 
+    cursor: pointer    
+}
+.box i{
+    cursor: pointer;
+    
+}
+/* about section ends */
+
+/*bottom part start*/
+.bottom{
+    position: sticky;
+    bottom: 0;
+    height: 100px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.icons{
+    margin-top: 14px; 
+}
+.icons i{
+    cursor: pointer;
+}
+#myProgressBar{
+    width: 80vw; 
+    cursor: pointer;
+}
+.timestamp{
+    margin: 0 23px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+.songinfo{
+    position: absolute;
+    left: 20vw;
+    font-size: 1.5rem;
+    font-family: 'Varela Round', sans-serif;
+}
+/*bottom part ends*/
+
+/*media queries*/
+@media(max-width:1200px)
+{
+    html
+    {
+        font-size: 55%;
+    }
+    .music .container{
+        background-image: url('bructopictures/bg6.jpg');
+    }
+    .about .container{
+        background-image: url('bructopictures/bg4.jpg');
+        background-repeat: no-repeat;
+        position: relative;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+} 
